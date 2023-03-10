@@ -29,9 +29,6 @@ export const PageWrapper = styled.div`
   }
 `;
 
-export const AirQuality = styled.div`
-  grid-area: air-quality;
-`;
 export const SunHour = styled.div`
   grid-area: sun-hour;
 `;
