@@ -4,12 +4,13 @@ import rain from "../../assets/imgs/rain.svg";
 import humidity from "../../assets/imgs/humidity.svg";
 import wind from "../../assets/imgs/wind.svg";
 
+import MaxMinDegree from "../MaxMinDegree";
+
 import {
   DegreeBox,
   Location,
   Temperature,
   CurrentDegree,
-  MaxMinDegree,
   Infos,
   InfoBox,
   InfoTexts,
@@ -27,9 +28,7 @@ function Degree() {
         <CurrentDegree>
           18 <span>ºC</span>
         </CurrentDegree>
-        <MaxMinDegree>
-          22º <span>16º</span>
-        </MaxMinDegree>
+        <MaxMinDegree max={22} min={16} />
       </Temperature>
       <Infos>
         <InfoBox>

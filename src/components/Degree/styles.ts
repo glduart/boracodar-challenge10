@@ -44,6 +44,10 @@ export const Temperature = styled.div`
   justify-content: center;
   align-items: center;
   color: #fff;
+
+  & > span {
+    font-size: 1.25rem; //20px
+  }
 `;
 
 export const CurrentDegree = styled.h2`
@@ -63,13 +67,6 @@ export const CurrentDegree = styled.h2`
   }
 `;
 
-export const MaxMinDegree = styled.p`
-  font-weight: bold;
-  font-size: 1.25rem; //20px
-  & > span {
-    color: #c2bff4;
-  }
-`;
 export const Infos = styled.ul`
   grid-area: infos;
   display: flex;

@@ -4,6 +4,7 @@ import sun from "../../assets/imgs/sun.svg";
 import coloredRain from "../../assets/imgs/colored-rain.svg";
 import thunder from "../../assets/imgs/thunder.svg";
 import cloudy from "../../assets/imgs/cloudy.svg";
+import MaxMinDegree from "../MaxMinDegree";
 
 function FollowingDays() {
   return (
@@ -11,37 +12,27 @@ function FollowingDays() {
       <FollowingDaysItem>
         <p>Amanhã</p>
         <img src={weather} alt="Weather Cloud" />
-        <span>
-          21º <span>16º</span>
-        </span>
+        <MaxMinDegree max={21} min={16} />
       </FollowingDaysItem>
       <FollowingDaysItem>
         <p>Sexta-Feira</p>
         <img src={sun} alt="Sun" />
-        <span>
-          28º <span>20º</span>
-        </span>
+        <MaxMinDegree max={28} min={20} />
       </FollowingDaysItem>
       <FollowingDaysItem>
         <p>Sábado</p>
         <img src={coloredRain} alt="Rain" />
-        <span>
-          25º <span>21º</span>
-        </span>
+        <MaxMinDegree max={25} min={21} />
       </FollowingDaysItem>
       <FollowingDaysItem>
         <p>Domingo</p>
         <img src={thunder} alt="Thunder" />
-        <span>
-          20º <span>14º</span>
-        </span>
+        <MaxMinDegree max={20} min={14} />
       </FollowingDaysItem>
       <FollowingDaysItem>
         <p>Segunda-Feira</p>
         <img src={cloudy} alt="Cloudy" />
-        <span>
-          24º <span>18º</span>
-        </span>
+        <MaxMinDegree max={24} min={18} />
       </FollowingDaysItem>
     </FollowingDaysBox>
   );
