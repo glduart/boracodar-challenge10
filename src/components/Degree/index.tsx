@@ -15,8 +15,22 @@ import {
   InfoBox,
   InfoTexts,
 } from "./styles";
+interface IProps {
+  infos: IDegreeInfos;
+}
+export interface IDegreeInfos {
+  main: {
+    humidity: number;
+    temp: number;
+    temp_max: number;
+    temp_min: number;
+  };
+  wind: {
+    speed: number;
+  };
+}
 
-function Degree() {
+function Degree({ infos }: IProps) {
   return (
     <DegreeBox>
       <img src={weather} alt="Weather cloud" />
@@ -26,9 +40,9 @@ function Degree() {
       </Location>
       <Temperature>
         <CurrentDegree>
-          18 <span>ºC</span>
+          {Math.round(infos?.main?.temp)} <span>ºC</span>
         </CurrentDegree>
-        <MaxMinDegree max={22} min={16} />
+        <MaxMinDegree max={infos?.main?.temp_max} min={infos?.main?.temp_min} />
       </Temperature>
       <Infos>
         <InfoBox>
@@ -36,7 +50,7 @@ function Degree() {
           <InfoTexts>
             <p>Vento</p>
             <span>
-              17 <span>km/h</span>
+              {Math.round(3.6 * infos?.wind?.speed)} <span>km/h</span>
             </span>
           </InfoTexts>
         </InfoBox>
@@ -45,7 +59,7 @@ function Degree() {
           <InfoTexts>
             <p>Umidade</p>
             <span>
-              31 <span>%</span>
+              {infos?.main?.humidity} <span>%</span>
             </span>
           </InfoTexts>
         </InfoBox>
