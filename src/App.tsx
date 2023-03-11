@@ -1,6 +1,7 @@
-import { Page, PageWrapper, SunHour, DegreeDays } from "./styles";
+import { Page, PageWrapper, SunHour } from "./styles";
 import Degree from "./components/Degree";
 import AirQuality from "./components/AirQuality";
+import FollowingDays from "./components/FollowingDays";
 
 function App() {
   return (
@@ -9,7 +10,7 @@ function App() {
         <Degree />
         <AirQuality />
         <SunHour></SunHour>
-        <DegreeDays></DegreeDays>
+        <FollowingDays />
       </PageWrapper>
     </Page>
   );

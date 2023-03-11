@@ -22,8 +22,9 @@ export const PageWrapper = styled.div`
   grid-gap: 1.5rem; //24px
   grid-template-areas:
     "degree air-quality sun-hour"
-    "degree degree-days degree-days";
-  & > div {
+    "degree following-days following-days";
+  & > div,
+  & > ul {
     background-color: #6d67d0;
     border-radius: 0.625rem; //10px
   }
@@ -31,7 +32,4 @@ export const PageWrapper = styled.div`
 
 export const SunHour = styled.div`
   grid-area: sun-hour;
-`;
-export const DegreeDays = styled.div`
-  grid-area: degree-days;
 `;
