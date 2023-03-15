@@ -1,7 +1,8 @@
-import { Page, PageWrapper, SunHour } from "./styles";
+import { Page, PageWrapper } from "./styles";
 import Degree from "./components/Degree";
 import AirQuality from "./components/AirQuality";
 import FollowingDays from "./components/FollowingDays";
+import SunHour from "./components/SunChart";
 import { useEffect, useState } from "react";
 import axios from "axios";
 import { IDegreeInfos } from "./components/Degree";
@@ -28,7 +29,7 @@ function App() {
       <PageWrapper>
         <Degree infos={degreeInfos} />
         <AirQuality />
-        <SunHour></SunHour>
+        <SunHour />
         <FollowingDays />
       </PageWrapper>
     </Page>

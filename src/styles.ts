@@ -29,7 +29,3 @@ export const PageWrapper = styled.div`
     border-radius: 0.625rem; //10px
   }
 `;
-
-export const SunHour = styled.div`
-  grid-area: sun-hour;
-`;
